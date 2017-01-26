@@ -5,7 +5,7 @@
         ng-click="toggleDropdown($event, 'display')"
         ng-class="{ open: dropdownOpen == 'display' }">
         <i class="fa fa-file-o"></i>
-        Display
+        Format
       </a>
       <ul class="dropdown-menu">
         <li>
@@ -21,7 +21,7 @@
               ng-click="show('plain')"
               ng-class="{ active: panelVisibility == 'plain' }">
                 <i class="fa fa-file-text-o"></i>
-                Plain Text
+                Texte
             </a>
         </li>
         <li>
@@ -29,7 +29,7 @@
               ng-click="show('headers')"
               ng-class="{ active: panelVisibility == 'headers' }">
                 <i class="fa fa-list"></i>
-                Headers
+                En-têtes
             </a>
         </li>
         <li>
@@ -48,7 +48,7 @@
         ng-click="toggleDropdown($event, 'viewport')"
         ng-class="{ open: dropdownOpen == 'viewport' }">
         <i class="fa fa-tablet"></i>
-        Viewport
+        Surface d'affichage
       </a>
       <ul class="dropdown-menu">
         <li>
@@ -56,7 +56,7 @@
             ng-click="resize('320px')"
             ng-class="{ active: iframeSize == '320px' }">
               <i class="fa fa-mobile fa-mobile-smaller"></i>
-              320px
+              320px 
           </a>
       </li>
       <li>
@@ -80,7 +80,7 @@
             ng-click="resize()"
             ng-class="{ active: iframeSize == null }">
               <i class="fa fa-desktop"></i>
-              Full
+              Pleine
           </a>
       </li>
       </ul>
@@ -92,36 +92,20 @@
           ng-click="show('attachments')"
           ng-class="{ active: panelVisibility == 'attachments', disabled: !item.attachments }">
             <i class="fa fa-paperclip"></i>
-            Attachments
+            Pièces jointes
         </a>
     </li>
     <li>
         <a href="" class=""
           ng-click="delete(item)">
             <i class="fa fa-trash-o"></i>
-            Delete
-        </a>
-    </li>
-    <li>
-        <a href="" class=""
-          ng-click="relay(item)"
-          ng-class="{ disabled: !config.isOutgoingEnabled }">
-            <i class="fa fa-cloud-upload"></i>
-            Relay
-        </a>
-    </li>
-    <li>
-        <a href="" class=""
-           ng-click="relayTo(item)"
-           ng-class="{ disabled: !config.isOutgoingEnabled }">
-            <i class="fa fa-share"></i>
-            Relay to
+            Supprimer
         </a>
     </li>
     <li>
         <a href="email/{{item.id}}/download" class="">
             <i class="fa fa-cloud-download"></i>
-            Download EML
+            Format Outlook EML
         </a>
     </li>
 </ul>
